@@ -169,11 +169,9 @@ canvas.addEventListener('mouseup',()=>{
 
 canvas.addEventListener('click',(e)=>{
     if (fill.classList.contains('active')){
-        console.log(e.pageX,e.pageY);
         e.pageX-=8;
         e.pageY-=8;
         imageData = ctx.getImageData(0, 0, 900, 500);
-        console.log(imageData);
         for (let i=0;i<501;i++){
             for (let j=0;j<901;j++){
                 vis[i][j] = 0;
